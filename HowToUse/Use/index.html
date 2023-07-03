@@ -9,13 +9,15 @@
       
       
       
+        <link rel="prev" href="../..">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
-        <title>使用指南 - 项目文档</title>
+        <title>使用文档 - 项目文档</title>
       
     
     
@@ -92,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              使用指南
+              使用文档
             
           </span>
         </div>
@@ -191,11 +193,120 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          使用文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         使用文档
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2mkdocs" class="md-nav__link">
+    2.mkdocs安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3mkdocs" class="md-nav__link">
+    3.mkdocs简单使用
+  </a>
+  
+    <nav class="md-nav" aria-label="3.mkdocs简单使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1mkdocs" class="md-nav__link">
+    1.创建一个基本的mkdocs并使用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.添加页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.更改主题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4github" class="md-nav__link">
+    4.部署到GitHub
+  </a>
+  
+    <nav class="md-nav" aria-label="4.部署到GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1github" class="md-nav__link">
+    1.连接到GitHub
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    2.个人页面
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -333,9 +444,9 @@
 <p>我们只需要运行如下命令，就可以创建一个站点：</p>
 <p><code>mkdocs new dir_name</code></p>
 <p>这个命令会在当前目录下创建一个目录（dir_name）。注意：dir_name可以选择自己喜欢的名字。</p>
-<p><img alt="在这里插入图片描述" src="../images/use/20210422170006774.png" /></p>
+<p><img alt="在这里插入图片描述" src="../../images/Use/20210422170006774.png" /></p>
 <p>该目录结构如下：</p>
-<p><img alt="在这里插入图片描述" src="../images/use/2021042217001614.png" /></p>
+<p><img alt="在这里插入图片描述" src="../../images/Use/2021042217001614.png" /></p>
 <p>在创建的目录下，有一个子目录docs，其中包含了源文件、页面等数据；
 在创建的目录下，有一个文件mkdocs.yml，这就是配置文件；
 然后进入我们创建的目录learn_mkdocs，运行如下命令，即可在本地访问站点：</p>
@@ -394,7 +505,7 @@
 <p>当你尽心尽力地输出文档后，你不希望这些内容只能自己在本地看吧，你还是希望将这些文档部署到服务器上，让其他人也能看。本小节就讲解如何部署文档到服务器上。首先来认识一个命令:<code>mkdocs build</code></p>
 <p><img alt="image-20230703160607679" src="../../images/Use/image-20230703160607679.png" /></p>
 <p>这个命令会在<code>learn-mkdocs</code>目录下生成一个目录<code>site</code>，这个目录中包含了静态站点的页面内容。</p>
-<p><img alt="image-20230703160659578" src="../images/Use/image-20230703160659578.png" /></p>
+<p><img alt="image-20230703160659578" src="../../images/Use/image-20230703160656906.png" /></p>
 <h4 id="1github">1.连接到GitHub</h4>
 <p>我们可以在GitHub中创建一个仓库，名为<code>mymkdocs</code>。然后在<code>learn-mkdocs</code>下打开git，并将当前目录设置为一个仓库，然后与GitHub新创建的仓库<code>mymkdocs</code>连接：</p>
 <pre><code class="language-git">git init
@@ -413,7 +524,7 @@ git remote add origin https://github.com/你的GitHub名字/你的项目名字.g
 <p>浏览器访问<code>https://{你的GitHub的名字}.github.io</code>，即可访问部署的站点：</p>
 <p><img alt="image-20230703161912377" src="../../images/Use/image-20230703161912377.png" /></p>
 <blockquote>
-<p>​ 注意：部署在GitHub之后每一次更新都需要执行命令<code>mkdocs gh-deploy</code></p>
+<p>​ 注意：部署在GitHub之后每一次更新都需要执行命令<code>mkdocs build</code>和<code>mkdocs gh-deploy</code></p>
 </blockquote>
 
 
