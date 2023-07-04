@@ -169,4 +169,4 @@ git remote add origin https://github.com/你的GitHub名字/你的项目名字.g
 
 ![image-20230703161912377](../images/Use/image-20230703161912377.png)
 
-> ​	注意：部署在GitHub之后每一次更新都需要执行命令`mkdocs gh-deploy`
+> ​	注意：部署在GitHub之后每一次更新都需要执行命令`mkdocs gh-deploy`，建议现在本地更新完达到效果之后再推送至GitHub
