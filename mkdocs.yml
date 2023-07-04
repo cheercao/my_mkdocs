@@ -7,7 +7,27 @@ nav:
 
 # 设置主题 通常有readthedocs这是内置的无需另外安装如需其它主题则需安装
 # 如主题 material，该主题需要运行pip install mkdocs-material安装才能使用
+# Repository
+repo_name: 'cheercao/cheercao.github.io'
+repo_url: 'https://github.com/cheercao/my_mkdocs'
+
 theme:
   name: material
+  palette:
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  language: 'zh'
+
+
 
 
