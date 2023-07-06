@@ -3,14 +3,16 @@ site_name: 项目文档
 # 目录
 nav:
   - 主页: index.md
-  - 使用文档: HowToUse/Use.md
+  - 使用说明:
+    - 创建文档: HowToUse/Use.md
+    - yaml配置: HowToUse/Config_YAML.md
 
-# 设置主题 通常有readthedocs这是内置的无需另外安装如需其它主题则需安装
-# 如主题 material，该主题需要运行pip install mkdocs-material安装才能使用
 # Repository
 repo_name: 'cheercao/cheercao.github.io'
 repo_url: 'https://github.com/cheercao/my_mkdocs'
 
+# 设置主题 通常有readthedocs这是内置的无需另外安装如需其它主题则需安装
+# 如主题 material，该主题需要运行pip install mkdocs-material安装才能使用
 theme:
   name: material
   palette:
