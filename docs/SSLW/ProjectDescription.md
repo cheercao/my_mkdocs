@@ -201,3 +201,47 @@ class Ui_MainWindow(MainGui.Ui_MainWindow):
 ​	当然，对于外面的tab类我们也只需关注不同的部分即可，修改这些不同的部分便可将所有自己编写的界面展示出来，而对于不同界面的不同业务都应该在ui类中进行代码编写
 
 ![image-20230808112936966](../images/SSLW/image-20230808112936966.png)
+
+## 5.项目打包
+
+​	在我们完成了项目或者完成了项目的一部分之后，需要查看项目打包后的效果，此时就需要用到python的`pyinstaller`包了，一般来说，我们需要在conda环境下进入项目的根目录，然后执行命令**pyinstaller -F -w 程序入口文件.py**，具体如下所示：
+
+![打包](../images/SSLW/image-20230808161743016.png)
+
+​	但通常这只是对第一次打包程序时执行的命令，而本项目通过这种方式打包并不能保证程序能正常运行，有需要修改的地方，通过这种方式打包，会自动在根目录下生成文件BaseGui.spec，文件的名字是你程序的入口的名字，通常我们需要对这个文件进行修改，需要在红框中加入你的所有静态资源，也就是通过相对路径调用的资源都需要在这里**显示的说明**，否则可能会导致打包出来的程序运行时报找不到路径错误，切记不要在程序中使用**绝对路径**。
+
+![修改](../images/SSLW/image-20230808161348848.png)
+
+​	在修改了spec文件之后我们就无需使用之前的打包程序的命令了，而是直接使用命令`pyinstaller BaseGui.spec`直接打包exe程序
+
+![dabao](../images/SSLW/image-20230808161915283.png)
+
+​	最后生成程序在dist文件夹下，结果如下所示：
+
+![结果](../images/SSLW/image-20230808162112065.png)
+
+```python
+常用参数 含义
+-i 或 -icon 生成icon
+-F 创建一个绑定的可执行文件
+-w 使用窗口，无控制台
+-C 使用控制台，无窗口
+-D 创建一个包含可执行文件的单文件夹包(默认情况下)
+-n 文件名
+```
+
+如还有疑问，具体请参考博客：[Python脚本打包成exe，看这一篇就够了！_python 打包_利白的博客-CSDN博客](https://blog.csdn.net/libaineu2004/article/details/112612421)
+
+如果程序已经全部写完准备交付时，注意，在打包后有时可能exe文件过大，这是就需要压缩exe文件了，具体请参考博客：[Pyinstaller打包python文件太大？教你三个小技巧有效减小文件体积 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/521417177)（不一定有用），而对于打包的exe文件，我们需要保证它的安全性，一般会进行加密处理，建议在exe加密之后交付给客户，具体操作如下所示：
+
+![加密](../images/SSLW/image-20230808163717226.png)
+
+如果这种加密方法不可行，可参考如下博客：[谈谈 Pyinstaller 的编译和反编译，如何保护你的代码 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/109266820#:~:text=三、使用 pyinstaller 加密打包exe 1 1. 安装 pycrypto 包,xxx.py 3 3. 反编译测试 那么我们再来测试一下加密打包的exe还能不能被反编译。 再次执行 pyinstxtractor.py )和[PyInstaller将Python文件打包为exe后如何反编译（破解源码）以及防止反编译-腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/1739867)
+
+## 建议学习网站
+
+- 生成PDF学习网站：[4.7. 使用reportlab模块 — Python笔记 文档 (osgeo.cn)](https://www.osgeo.cn/python-tutorial/pdf-reportlab.html)和[Python自动化办公之生成PDF报告详解_python_脚本之家 (jb51.net)](https://www.jb51.net/article/279364.htm)
+- pythonOCC基本用法学习博客：[PythonOCC入门进阶到实战_小新快跑123的博客-CSDN博客](https://blog.csdn.net/weixin_42755384/article/details/87893697)
+- PyQt教程博客：[PyQt完整入门教程 - lovesoo - 博客园 (cnblogs.com)](https://www.cnblogs.com/lovesoo/p/12491361.html)，[介绍 - PyQt 中文教程 (gitbook.io)](https://maicss.gitbook.io/pyqt-chinese-tutoral/pyqt5/index)和[Python 小白从零开始 PyQt5 项目实战（8）汇总篇（完整例程）_pyqt5项目_youcans_的博客-CSDN博客](https://blog.csdn.net/youcans/article/details/120925109)
+- PEP8规范文档：[PEP 8 -- Style Guide for Python Code |《PEP 代码规范格式文档归纳》| Python 技术论坛 (learnku.com)](https://learnku.com/docs/styleofcode/PEP_8/7084)
+- 
