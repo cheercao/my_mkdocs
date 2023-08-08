@@ -1,0 +1,811 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../HowToUse/Config_YAML/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+    
+    
+      
+        <title>构建项目 - 项目文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="项目文档" class="md-header__button md-logo" aria-label="项目文档" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            项目文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              构建项目
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/cheercao/my_mkdocs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cheercao/cheercao.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../HowToUse/Use/" class="md-tabs__link">
+        文档构建
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        项目文档
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="项目文档" class="md-nav__button md-logo" aria-label="项目文档" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    项目文档
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/cheercao/my_mkdocs" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cheercao/cheercao.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          文档构建
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          文档构建
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToUse/Use/" class="md-nav__link">
+        创建文档
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HowToUse/Config_YAML/" class="md-nav__link">
+        yaml配置
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          项目文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          项目文档
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          构建项目
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        构建项目
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.项目准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.项目说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.项目使用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.项目修改
+  </a>
+  
+    <nav class="md-nav" aria-label="4.项目修改">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1.修改配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    2.设计软件界面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3tab" class="md-nav__link">
+    3.新增tab页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    4.设计算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5.部分文件说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1.项目准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2.项目说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3.项目使用
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4.项目修改
+  </a>
+  
+    <nav class="md-nav" aria-label="4.项目修改">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    1.修改配置文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    2.设计软件界面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3tab" class="md-nav__link">
+    3.新增tab页
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    4.设计算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5.部分文件说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>构建项目</h1>
+
+<h2 id="1">1.项目准备</h2>
+<p>​   本项目使用python+QT构建，使用QT实现软件的界面设计，使用python完成算法设计。项目环境建议使用conda构建虚拟环境，python版本建议为3.6。项目需要的软件包包括：PyQt5，matplotlib，numpy，pandas，pymysql，reportlab，pyinstaller</p>
+<blockquote>
+<p>​ pip install PyQt5 -i https://pypi.tuna.tsinghua.edu.cn/simple</p>
+</blockquote>
+<p>​   在项目开发中可能会使用到pythonocc这个软件包，在这里也给出安装方法：</p>
+<blockquote>
+<p>​ 安装pythonOCC的7.4.0版本使用命令：conda install -c dlr-sc -c pythonocc pythonocc-core=7.4.0rc1</p>
+<p>​ （推荐）安装pythonOCC的7.4.1版本使用命令：conda install -c dlr-sc -c pythonocc pythonocc-core=7.4.1</p>
+</blockquote>
+<p>​   在项目开发时建议安装QT，使用QT设计界面会大大加快软件的开发，QT安装教程参考<a href="https://blog.csdn.net/zhizhengguan/article/details/107567449">Qt：windows下Qt安装教程_OceanStar的学习笔记的博客-CSDN博客</a></p>
+<h2 id="2">2.项目说明</h2>
+<p><img alt="项目说明" src="../../images/SSLW/image-20230807143315746.png" /></p>
+<p>​   整个项目结构如图所示，项目中的build，dist不需要我们关注，因为这是生成exe文件时自动生成的，我们主要需要关注的在于analysis，GUI和ui文件，其中analysis文档主要用于算法设计，所有的算法都放在这个文件下面，可以根据自己的算法动态的加入，但需要注意的是，其中的算法必须保证操作数据库与不操作数据库的部分隔开，算法仅仅使用数据而不涉及数据库的操作，需要将数据库的操作单独分离出来，具体结构如下所示</p>
+<p><img alt="算法结构" src="../../images/SSLW/image-20230807143634993.png" /></p>
+<p>​   其次我们需要关注的就是GUI文件了，其中的需要我们重点关注的便是ribbon_main.ini文件，至于其它文件可以暂时忽略，在这里不做赘述，ribbon_main文件主要用于设计项目的顶部导航栏，至于具体参数设计将在后面阐述。在这里我们只需要知道GUI文件中有配置文件需要我们修改即可，至于其它文件建议不懂即可。</p>
+<p><img alt="GUI文件结构" src="../../images/SSLW/image-20230807144410932.png" /></p>
+<p>​   项目重点需要关注的是ui文件和module文件下的<strong>DisplayManager</strong>文件，其中的ui文件下包含了所有的页面设计，也就是所有的tab页设计全部放在ui文件下面，至于DisplayManager文件则是软件的主界面，整个软件在该文件中布局，具体的结构如下所示：</p>
+<p><img alt="UI" src="../../images/SSLW/image-20230807145554028.png" /></p>
+<p>​   项目中还有一个文件是save_data文件，该文件存储的是项目算法分析的结果，算法分析画的所有图和结果都存储在该文件下，该文件一开始为空，但需要注意的是，需要在该文件下保留文件content.ini和database.ini，content存储图片路径、分析结果等等内容，而database存储连接数据库信息，而一开始这两个文件可以需要为空但必须保留空文件，因为在我们打包程序为exe文件时，程序会默认将文件都存储在用户的AppData中，而一般用户的AppData是不允许修改的，所有在动态创建文件时可能会报错，所以建议在save_data文件下保留这两个文件，至于后续开发也可以根据自己的需要加入文件，但所有用户的文件都必须存储在save_data文件下，因为文件保存和导入都是对这个文件进行操作，具体文件结构如下所示：</p>
+<p><img alt="保存文件" src="../../images/SSLW/image-20230807151218375.png" /></p>
+<h2 id="3">3.项目使用</h2>
+<p>​   在网站获得代码之后，使用conda虚拟环境安装好所有需要的包，直接运行文件BaseGui.py即可，具体的效果如下所示：</p>
+<p><img alt="项目" src="../../images/SSLW/image-20230807145728538.png" /></p>
+<h2 id="4">4.项目修改</h2>
+<h3 id="1_1">1.修改配置文件</h3>
+<p>​   配置文件Ribbon_main具体内容如图所示：</p>
+<p><img alt="配置文件" src="../../images/SSLW/image-20230807151847907.png" /></p>
+<p>​   其中配置文件的所有内容都是顶部导航栏的设计，其中table_name参数是导航栏的大类，也就是最上面的部分，参数panel则是大类中的小类，通俗来讲，一个大类中有多个功能，但可能多个功能又可以细分为多个小功能，而参数panel则是细分的小功能，如果没有细分的小功能则直接删除panel也可以，参数caption则是细分的功能说明也就是图片下面的说明，参数icon_name则是功能的图标，而图标具体放在文件icons下面，如需修改则将图标文件放入icons下即可，参数status_tip则是当鼠标停靠在某一个功能上时显示的说明，参数icon_visible则是表示图片是否可用，通常直接设置为True即可，参数connection则是将功能连接到某一个函数，可以是某一个功能也可以是具体都某一个tab页。</p>
+<p>​   如需修改，建议直接复制其中某一行直接修改参数即可，如果觉得参数可读性不高需要修改，也可以修改参数名，无硬性要求，修改了参数名之后也需在后续的应用文件中修改，至于具体应用内容则在文件module中的ShowGui文件中，具体代码如下所示</p>
+<p><img alt="配置" src="../../images/SSLW/image-20230807155134059.png" /></p>
+<p>​   这里的配置文件仅仅是顶部的导航栏，在后续开发中建议仅修改Ribbon_main中的内容即可，直接复制某一行修改其中参数即可。</p>
+<h3 id="2_1">2.设计软件界面</h3>
+<p>​   该软件的所有界面都是由QT实现，而在我们开发过程中可以使用QT提供的Designer来设计界面，具体界面如下所示：</p>
+<p><img alt="QTDesigner" src="../../images/SSLW/image-20230807160753282.png" /></p>
+<p>​   从图中我们可以看到QT提供的设计界面由两部分组成，分别是左边的组件库和右边的部署空间，我们可以根据需求从左边的组件库中选出需要的组件放入右边的空间，注意左边组件库中的所有组件都是有用的，需要开发者理解组件并适当的应用，特别是Spacers弹簧组件，这个组件配合布局可以设计出比较整洁的页面、</p>
+<p>​   我们在QT设计完成页面之后，找到设计的源文件，它都后缀一般是.ui，然后在源文件的文件夹下新建一个文件，在文件中键入<code>pyuic5 -o generate_report.py generate_report.ui</code>，然后修改文件后缀为.bat，然后运行该bat文件，该文件会将在QT中设计的UI文件转换成python中的类，在后续使用中会非常方便。如果对于QT转python还有疑问具体参考博客：<a href="https://www.cnblogs.com/lovesoo/p/12491361.html">PyQt完整入门教程 - lovesoo - 博客园 (cnblogs.com)</a>，如果对于在python中使用QT有疑问看具体参考博客：<a href="https://maicss.gitbook.io/pyqt-chinese-tutoral/pyqt5/index">介绍 - PyQt 中文教程 (gitbook.io)</a>和<a href="https://blog.csdn.net/youcans/article/details/120925109">Python 小白从零开始 PyQt5 项目实战（8）汇总篇（完整例程）_pyqt5项目_youcans_的博客-CSDN博客</a></p>
+<blockquote>
+<p>​ 注意：所有的界面设计的python文件都需要放在ui文件夹下以便统一管理</p>
+</blockquote>
+<h3 id="3tab">3.新增tab页</h3>
+<p>​   在我们使用QT设计完界面并转换成python类之后，我们需要将界面展示出来，由于项目整体框架已经写好了，接下来我会用项目中的一个示例进行说明，给出后续开发中需要修改的地方，首先我们在QT中设计了一个导入数据的界面如下所示：</p>
+<p><img alt="导入数据" src="../../images/SSLW/image-20230807162408983.png" /></p>
+<p>然后通过bat文件将ui界面转换成python文件，具体内容如下所示：</p>
+<p><img alt="导入数据python文件" src="../../images/SSLW/image-20230807162556221.png" /></p>
+<p>​   对于自动生成的python文件我们无需修改即可直接使用，同时我们需要将配置文件进行修改，在导航栏中加入导入数据模块，并添加点击事件，具体改动如下所示：</p>
+<p><img alt="导入数据配置文件" src="../../images/SSLW/image-20230807162750523.png" /></p>
+<p>​   我们需要重点关注的connection参数的点击事件，这里的点击事件写在module文件夹下的OCAFModule.py中，这个文件主要是一个过度文件，我们需要重点关注的内容在module文件下的DisplayManager文件中，具体如下所示：</p>
+<p><img alt="导入数据OCAF" src="../../images/SSLW/image-20230807163225620.png" /></p>
+<p><img alt="导入数据Display" src="../../images/SSLW/image-20230807163437760.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 在displaymanager类中新增一个方法来添加tab页</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">def</span> <span class="nf">import_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this is import_data&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="c1"># 检查是否已经存在 Tab，如果已经存在则无需新增tab页否则新增tab页，其中&quot;import_data_tab&quot;是tab页的id</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">import_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canva</span><span class="o">.</span><span class="n">indexOf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canva</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span><span class="n">QWidget</span><span class="p">,</span> <span class="s2">&quot;import_data_tab&quot;</span><span class="p">))</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="k">if</span> <span class="n">import_data</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">canva</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="n">import_data</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="k">return</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">tab</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="c1"># 新建tab页</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">cre</span> <span class="o">=</span> <span class="n">import_data_tab</span><span class="p">()</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">cre</span><span class="o">.</span><span class="n">cre</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="c1"># 将新增的tab页加入整个tab页的组件中，其中&quot;数据导入&quot;为tab页的标题</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">tab_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">canva</span><span class="o">.</span><span class="n">addTab</span><span class="p">(</span><span class="n">tab</span><span class="p">,</span> <span class="s2">&quot;数据导入&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">canva</span><span class="o">.</span><span class="n">setCurrentIndex</span><span class="p">(</span><span class="n">tab_index</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># 每一个新增的tab页都需要在文件displaymanager中新增一个类来创建tab页</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># 注意，在新增类时直接复制然后修改相应的类即可，整体流程是无需修改的</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">class</span> <span class="nc">import_data_tab</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="nb">super</span><span class="p">(</span><span class="n">import_data_tab</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="k">def</span> <span class="nf">cre</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tab</span><span class="p">):</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="n">tab</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;import_data_tab&quot;</span><span class="p">)</span>  <span class="c1"># 设置对象名以便后续查找</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="c1"># 设置tab页的布局</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="n">layout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">baseW</span> <span class="o">=</span> <span class="n">QtWidgets</span><span class="o">.</span><span class="n">QWidget</span><span class="p">()</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="c1"># 这是通过.ui转成的python类，import_data_ui就是转成的类</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="n">ui</span> <span class="o">=</span> <span class="n">import_data_ui</span><span class="p">()</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="n">ui</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="n">baseW</span><span class="p">)</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">baseW</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="导入数据的类" src="../../images/SSLW/image-20230807171134704.png" /></p>
+<p>​   注意，生成的python无需修改即可直接使用，我们只需要给对于的按钮添加点击事件即可，至此添加tab页的整个流程就结束了，最后实现的效果图如下所示：</p>
+<p><img alt="效果" src="../../images/SSLW/image-20230807171413628.png" /></p>
+<h3 id="4_1">4.设计算法</h3>
+<p>​   本项目的算法一般只涉及到数据的处理，一般包括：导入数据，分析数据，根据数据画饼图、柱状图以及根据数据给出分析评语等等，所以所有的算法可以作为一个单独的模块，也就是说我们的算法需要独立于项目，项目仅仅是调用我们的算法，具体算法结构如下所示：</p>
+<p><img alt="算法" src="../../images/SSLW/image-20230808102417986.png" /></p>
+<p>​   analysis文件上面部分就是算法，由于实现一个功能可能需要多个算法一起实现，所以建议一个功能一个文件，功能还能进行细分，通过不同文件夹来细分管理，而下面部分则是对算法的调用，可以在下面部分对算法进行测试使用，注意，上面部分的算法不能出现对数据库的调用，所有关于数据库的调用都应该拿到外面使用，也就是说算法仅仅涉及到数据的处理，比如将数据处理成什么格式，根据数据画图，根据数据给出评语等，而对数据库的操作，如将数据传入数据库，从数据库获取数据这些都应该写在项目中，或者写在下面部分对算法进行测试使用。</p>
+<p>​   在我们编写算法时需要严格遵守PEP8的标准，对于一个写好的完整算法必须严格遵守这个标准，如果是在pycharm中编写代码，编译器会自动检查代码的格式是否满足PEP8的标准，具体如下所示：</p>
+<p><img alt="PEP8" src="../../images/SSLW/image-20230808103212006.png" /></p>
+<p>​   在编译器的右上角，我们可以看到文件的所有警告，当我们点击警告是会弹出下面的警告，会具体告诉你哪一行代码不满足PEP8标准，当我们不知道我们的算法是否满足PEP8标准时，我们只需要查看文件是否有警告即可，需要去除所有的警告才能表示该算法已经编写完成。任何不满足PEP8标准的算法都不允许使用！如果你需要进一步了解PEP8规范请参考文档：<a href="https://learnku.com/docs/styleofcode/PEP_8/7084">PEP 8 -- Style Guide for Python Code |《PEP 代码规范格式文档归纳》| Python 技术论坛 (learnku.com)</a></p>
+<h3 id="5">5.部分文件说明</h3>
+<blockquote>
+<p>​ 对于该项目，我们需要重点关注的不多，但是项目中的部分文件是需要我们深入理解的</p>
+</blockquote>
+<p>​   首先我们需要关注的就是showgui这个文件，这个文件是我们运行程序时第一个展示的界面，这个界面总共包括六个部分，都已经模块化处理，如需对某一个部分进行修改仅需对某一个模块进行修改即可，六个部分分别为：顶部导航栏、左上部分ui、左下部分ui、中间tab页展示ui、右上部分ui、右下部分ui，具体实现都在文件的init部分，具体细节参考代码，具体代码如下所示：</p>
+<p><img alt="showGUI" src="../../images/SSLW/image-20230808110700968.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span> <span class="nc">Ui_MainWindow</span><span class="p">(</span><span class="n">MainGui</span><span class="o">.</span><span class="n">Ui_MainWindow</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowFlags</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">FramelessWindowHint</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="c1"># 中间tab展示部分</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">Displayshape_core</span><span class="o">=</span><span class="n">DisplayManager</span><span class="o">.</span><span class="n">DisplayManager</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">OCAF</span><span class="o">=</span><span class="n">OCAFModule</span><span class="o">.</span><span class="n">OCAF</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="c1"># 左下部分的树</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">model_buttom_tree</span><span class="o">=</span><span class="n">ModelTree</span><span class="o">.</span><span class="n">ModelTree</span><span class="p">()</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="c1"># 左上部分的树，如果项目需要对树进行修改，修改ModealTree中代码即可</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">model_top_tree</span> <span class="o">=</span> <span class="n">ModelTree</span><span class="o">.</span><span class="n">ModelTree</span><span class="p">()</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="c1"># 左下的部分绑定树代码</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">Displayshape_core</span><span class="o">.</span><span class="n">Buttom_left</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model_buttom_tree</span><span class="o">.</span><span class="n">tree</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        <span class="c1"># 左上部分绑定树代码</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">Displayshape_core</span><span class="o">.</span><span class="n">Top_left</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">model_top_tree</span><span class="o">.</span><span class="n">tree</span><span class="p">)</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Displayshape_core</span><span class="o">.</span><span class="n">all</span><span class="p">)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        <span class="c1"># Create TittleBar，最顶部的部分，就是编写右侧缩小，关闭的部分，具体请参考代码</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">TittleBar</span> <span class="o">=</span> <span class="n">TittleBarWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">addToolBar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">TittleBar</span><span class="p">)</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        <span class="c1">#self.init_ribbon()</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>        <span class="c1"># Create Ribbon 顶部按钮部分</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_ribbon</span> <span class="o">=</span> <span class="n">RibbonWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">addToolBar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ribbon</span><span class="p">)</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">insertToolBarBreak</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_ribbon</span><span class="p">)</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">init_ribbon</span><span class="p">()</span>
+</code></pre></div>
+<p>具体的六个部分如下所示：</p>
+<p><img alt="六部分" src="../../images/SSLW/image-20230808111508201.png" /></p>
+<p>​   而另一个需要我们关注的便是DisplayManager这个文件，我们需要深入理解它的作用，以及我们在后续开发中需要如何修改并加入内容，首先，第一部分我们无需关注，这些代码或许在后续开发中会用到也或许不会，而值得关注的第二部分则是每一个tab页的类，当我们新增一个tab页时都需要新增一个类来方便管理，一般来说我们只需要复制其中的某一个类然后修改部分关键代码即可，在后面我会给出需要修改的部分。</p>
+<p><img alt="dis" src="../../images/SSLW/image-20230808105155931.png" /></p>
+<p>​   而在displaymanager类中，则编写了关于界面的大体布局，所有布局内容都在init中编写，包括各个部分，init这部分代码一般不需要修改，一般只需要根据需求新增参数</p>
+<p><img alt="image-20230808112034897" src="../../images/SSLW/image-20230808112034897.png" /></p>
+<p>​   而DisaplayManager的函数部分大部分都是对在外面的tab类的调用展示，一般来说这一部分的代码也只需要外面复制其中的某一个函数然后修改部分关键代码即可，如果需要改变部分的布局，修改左上、左下、右上、右下部分的代码即可，而新增tab页就是函数的调用</p>
+<p><img alt="展示" src="../../images/SSLW/image-20230808112525514.png" /></p>
+<p>​   对于新增tab页，我们可以关注一下add_tab3和add_tab4函数，我们会发现它们大部分都是相同的我们只需修改不同的部分即可，当然在后续开发中可以考虑将这些进行整合</p>
+<p><img alt="add_tab3" src="../../images/SSLW/image-20230808112709356.png" /></p>
+<p>​   当然，对于外面的tab类我们也只需关注不同的部分即可，修改这些不同的部分便可将所有自己编写的界面展示出来，而对于不同界面的不同业务都应该在ui类中进行代码编写</p>
+<p><img alt="image-20230808112936966" src="../../images/SSLW/image-20230808112936966.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      
+    
+  </body>
+</html>
