@@ -418,7 +418,7 @@ disqus: your-shortname
 disqus:
 ```
 
-  
+> 如果还有疑问具体请参考https://shafish.cn/blog/mkdocs/
 
 ### mkdocs.yml 配置示例
 

@@ -3,9 +3,21 @@ site_name: 项目文档
 # 目录
 nav:
   - 主页: index.md
-  - 使用说明:
+  - 文档构建:
     - 创建文档: HowToUse/Use.md
     - yaml配置: HowToUse/Config_YAML.md
+  - 项目文档:
+    - 构建项目: SSLW/ProjectDescription.md
+
+
+# mkdocs.yml 相关配置
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
 
 # Repository
 repo_name: 'cheercao/cheercao.github.io'
@@ -15,6 +27,13 @@ repo_url: 'https://github.com/cheercao/my_mkdocs'
 # 如主题 material，该主题需要运行pip install mkdocs-material安装才能使用
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - content.code.copy
+    - content.code.annotate
+  font:
+    text: Roboto  # 常规字体
+    code: Roboto Mono  #代码块字体
   palette:
 
     # Palette toggle for light mode

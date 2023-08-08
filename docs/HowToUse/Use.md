@@ -1,6 +1,6 @@
 # 使用指南
 ## 1.介绍
-本项目使用mkdocs开源项目辅助生成项目网页文档并于GitHub连接由GitHub提供文档地址
+本项目使用mkdocs开源项目辅助生成项目网页文档并与GitHub连接由GitHub提供文档地址
 ## 2.mkdocs安装
 安装mkdocs前需要安装python环境。mkdocs要求python版本为：python 3.5、python 3.6 、python 3.7和python 3.8。
 
