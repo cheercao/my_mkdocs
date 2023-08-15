@@ -146,6 +146,8 @@ class import_data_tab(QWidget):
 
 > ​	对于该项目，我们需要重点关注的不多，但是项目中的部分文件是需要我们深入理解的
 
+#### 1.showgui文件
+
 ​	首先我们需要关注的就是showgui这个文件，这个文件是我们运行程序时第一个展示的界面，这个界面总共包括六个部分，都已经模块化处理，如需对某一个部分进行修改仅需对某一个模块进行修改即可，六个部分分别为：顶部导航栏、左上部分ui、左下部分ui、中间tab页展示ui、右上部分ui、右下部分ui，具体实现都在文件的init部分，具体细节参考代码，具体代码如下所示：
 
 ![showGUI](../images/SSLW/image-20230808110700968.png)
@@ -182,6 +184,8 @@ class Ui_MainWindow(MainGui.Ui_MainWindow):
 
 ![六部分](../images/SSLW/image-20230808111508201.png)
 
+#### 2.DisplayManager文件
+
 ​	而另一个需要我们关注的便是DisplayManager这个文件，我们需要深入理解它的作用，以及我们在后续开发中需要如何修改并加入内容，首先，第一部分我们无需关注，这些代码或许在后续开发中会用到也或许不会，而值得关注的第二部分则是每一个tab页的类，当我们新增一个tab页时都需要新增一个类来方便管理，一般来说我们只需要复制其中的某一个类然后修改部分关键代码即可，在后面我会给出需要修改的部分。
 
 ![dis](../images/SSLW/image-20230808105155931.png)
@@ -201,6 +205,61 @@ class Ui_MainWindow(MainGui.Ui_MainWindow):
 ​	当然，对于外面的tab类我们也只需关注不同的部分即可，修改这些不同的部分便可将所有自己编写的界面展示出来，而对于不同界面的不同业务都应该在ui类中进行代码编写
 
 ![image-20230808112936966](../images/SSLW/image-20230808112936966.png)
+
+> 注意：所有不涉及到某一个类的函数都应该写在Utility.py中，建议深入理解Utility文件，熟悉其中的每一个函数
+
+#### 3.Utility文件
+
+​	项目中所有的工具函数都放在这个文件中，注意，在项目中所有涉及到的相对路径都需要使用resource_path函数来获得绝对路径，否则在打包之后可能会导致资源找不到路径，所有相对路径都是在basegui的相对路径。注意Utility中的所有函数都需要保证不能与某一个类有关，且需要重复利用
+
+```python
+def resource_path(relative_path):
+    """返回资源的绝对路径"""
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
+```
+
+#### 4.import_data文件（导入数据文件）
+
+​	在该文件中主要是导入文件的类，其中包括导入文件的ui和导入文件的函数设计，在这里主要讲解导入数据的函数，具体如下：
+
+```python
+    def import_data_func(self):
+        # 首先是检查是否正确连接数据库，是否选择了导入数据的文件
+        if not self.lineEdit.text():
+            Utility.promp("导入数据提示", "请选择合适的数据文件！！！")
+            return
+        if not Utility.check_database_is_valid():
+            Utility.promp("导入数据提示","请正确连接数据库")
+            return
+        # 定义要调用的外部 exe 程序路径和参数，比如，这里我们使用了导入数据的外部exe程序，具体在文件夹import_data_program中，建议不要修改该文件夹下的任何信息，完全不动即可，copy_file的第一个参数是源文件路径，即我们需要导入什么样的数据的配置文件的路径，在文件夹import_data_config下，在这个文件夹下全部是json文件，所有厂商所有需要导入文件的格式都存储在这里，第二个参数则是exe程序的数据配置文件的路径，一般无需修改，copy_file的作用是将第一个参数中的文件中的所有信息都复制到第二个参数中的文件中。
+ 				Utility.copy_file(Utility.resource_path(f'./import_data_config/{self.form[self.comboBox.currentText()]}.json'),Utility.resource_path('./import_data_program/FiledMappingConfig.json'))
+		# 第一个参数是导入数据的路径
+        param1 = self.lineEdit.text()
+        # 第二个参数是数据在数据库中的配置，也就是格式文件，不同的数据会有不同的配置，在之前的copy_file中会动态修改文件
+        param2 = Utility.resource_path('./import_data_program/FiledMappingConfig.json')
+
+        # 获取当前工作目录
+        current_dir = os.getcwd()
+
+        # 切换到C#程序所在的文件夹，由于c#程序需要用到同一文件夹下的其它内容所以需要切换
+        os.chdir(Utility.resource_path("./import_data_program"))
+
+        # 调用C#可执行程序，并传入参数
+        result = subprocess.run(['XEMC.Software.DataSync.Console.exe', param1, param2])
+
+        # 恢复当前工作目录
+        os.chdir(current_dir)
+		
+        if result.returncode == 0:
+            Utility.promp("数据导入提示","导入数据成功")
+        else:
+            Utility.promp("数据导入提示","请选择正确的导入数据路径")
+
+```
+
+> ​	注意：import_data_program目录下的所有文件都无需修改，需要修改的仅仅是import_data_config下的配置
 
 ## 5.项目打包
 
@@ -244,4 +303,3 @@ class Ui_MainWindow(MainGui.Ui_MainWindow):
 - pythonOCC基本用法学习博客：[PythonOCC入门进阶到实战_小新快跑123的博客-CSDN博客](https://blog.csdn.net/weixin_42755384/article/details/87893697)
 - PyQt教程博客：[PyQt完整入门教程 - lovesoo - 博客园 (cnblogs.com)](https://www.cnblogs.com/lovesoo/p/12491361.html)，[介绍 - PyQt 中文教程 (gitbook.io)](https://maicss.gitbook.io/pyqt-chinese-tutoral/pyqt5/index)和[Python 小白从零开始 PyQt5 项目实战（8）汇总篇（完整例程）_pyqt5项目_youcans_的博客-CSDN博客](https://blog.csdn.net/youcans/article/details/120925109)
 - PEP8规范文档：[PEP 8 -- Style Guide for Python Code |《PEP 代码规范格式文档归纳》| Python 技术论坛 (learnku.com)](https://learnku.com/docs/styleofcode/PEP_8/7084)
-- 
