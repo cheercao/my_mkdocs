@@ -8,7 +8,7 @@ nav:
     - yaml配置: HowToUse/Config_YAML.md
   - 项目文档:
     - 构建项目: SSLW/ProjectDescription.md
-
+    - 项目需求和说明: SSLW/RequirementsSpecificationDocument.md
 
 # mkdocs.yml 相关配置
 markdown_extensions:
