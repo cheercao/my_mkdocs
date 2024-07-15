@@ -275,7 +275,7 @@ def resource_path(relative_path):
 
 ![dabao](../images/SSLW/image-20230808161915283.png)
 
-​	最后生成程序在dist文件夹下，结果如下所示：
+​	最后生成程序在dist文件夹下，结果如下所示：datas=[('./stylesheets', 'stylesheets'),('./GUI','GUI'),('./Pic','Pic'),('./icons','icons'),('./logo','logo'),('./save_data','save_data'),('./import_data_config','import_data_config'),('./import_data_program','import_data_program'),('./ui','ui'),('./ui_service','ui_service')],
 
 ![结果](../images/SSLW/image-20230808162112065.png)
 
