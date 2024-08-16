@@ -1,5 +1,18 @@
 # 标题
 site_name: 项目文档
+
+plugins:
+  - search
+  - simple
+
+simple:
+  auth:
+    enabled:true
+    type:basic
+    realm:"My Secret Site"
+    username:myuser
+    password:mypassword
+
 # 目录
 nav:
   - 主页: index.md
@@ -11,6 +24,12 @@ nav:
     - 项目需求和说明: SSLW/RequirementsSpecificationDocument.md
   - 学习文档:
     - 专利文档: patent/patent.md
+  - SCADA风机运行数据分析文档:
+    - 故障分析: WTAI-DT/error.md
+    - 发电性能分析: WTAI-DT/generator_performances.md
+    - 发电量分析: WTAI-DT/power.md
+    - 偏航分析: WTAI-DT/yaw_analysis.md
+    - 分析报告生成: WTAI-DT/report.md
 
 # mkdocs.yml 相关配置
 markdown_extensions:
