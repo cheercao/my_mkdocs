@@ -5,6 +5,7 @@ plugins:
   - search
   - simple
 
+
 simple:
   auth:
     enabled:true
@@ -24,21 +25,14 @@ nav:
     - 项目需求和说明: SSLW/RequirementsSpecificationDocument.md
   - 学习文档:
     - 专利文档: patent/patent.md
-  - SCADA风机运行数据分析文档:
-    - 故障分析: WTAI-DT/error.md
-    - 发电性能分析: WTAI-DT/generator_performances.md
-    - 发电量分析: WTAI-DT/power.md
-    - 偏航分析: WTAI-DT/yaw_analysis.md
-    - 分析报告生成: WTAI-DT/report.md
-
-# mkdocs.yml 相关配置
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences
-
+  - WTAI-DT:
+      - " ":
+        - SCADA-ANALYSIS:
+          - 故障分析: WTAI-DT/error.md
+          - 发电性能分析: WTAI-DT/generator_performances.md
+          - 发电量分析: WTAI-DT/power.md
+          - 偏航分析: WTAI-DT/yaw_analysis.md
+          - 分析报告生成: WTAI-DT/report.md
 
 # Repository
 repo_name: 'cheercao/cheercao.github.io'
@@ -46,39 +40,36 @@ repo_url: 'https://github.com/cheercao/my_mkdocs'
 
 # 设置主题 通常有readthedocs这是内置的无需另外安装如需其它主题则需安装
 # 如主题 material，该主题需要运行pip install mkdocs-material安装才能使用
+# Configuration
 theme:
   name: material
+  font:
+    code: Roboto Mono
+    text: Noto Serif SC
+#  logo: ./images/校徽.png
+#  favicon: ./images/icons/favcion.png
+  language: "zh"
   features:
-    - announce.dismiss
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - navigation.sections
+    # - navigation.prune # disabled temporarily for rendering speed
+    - navigation.top
+    - search.suggest
+    - navigation.instant
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - search.highlight
+    - content.tabs.link
     - content.action.edit
     - content.action.view
-    - content.code.annotate
-    - content.code.copy
-    # - content.code.select
-    # - content.tabs.link
-    - content.tooltips
-    # - header.autohide
-    # - navigation.expand
-    - navigation.footer
-    - navigation.indexes
-    # - navigation.instant
-    # - navigation.prune
-    - navigation.sections
-    - navigation.tabs
-    # - navigation.tabs.sticky
-    - navigation.top
-    - navigation.tracking
-    - search.highlight
-    - search.share
-    - search.suggest
-    - toc.follow
-  # - toc.integrate
-
-  font:
-    text: Roboto  # 常规字体
-    code: Roboto Mono  #代码块字体
+  icon:
+    edit: material/pencil
+    view: material/eye
+    annotation: fontawesome/solid/circle-question
   palette:
-
     # Palette toggle for light mode
     - scheme: default
       toggle:
@@ -90,8 +81,59 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  language: 'zh'
+
+# Plugins
 
 
+# Extensions
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets:
+      dedent_subsections: true
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+
+# Extra javascripts
+extra_javascript:
+  - javascripts/bd_statistics.js
+  - javascripts/mathjax.js
+  - javascripts/contributors.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Extra css
+extra_css:
+  - stylesheets/extra.css
+
+# Extra
+extra:
+  alternate:
+    - name: 简体中文
+      link: /zh/
+      lang: zh
+    - name: English
+      link: /en/
+      lang: en
+  version:
+    provider: mike
+    alias: true
 
 
