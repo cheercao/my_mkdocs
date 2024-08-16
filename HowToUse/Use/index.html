@@ -31,6 +31,12 @@
       
       
 
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm-86.2-346.7c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1 0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6-13.3 0-24-10.7-24-24v-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1 0-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>');}</style>
+
 
     
     
@@ -41,10 +47,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -81,10 +89,16 @@
       
     </div>
     
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="项目文档" class="md-header__button md-logo" aria-label="项目文档" data-md-component="logo">
       
@@ -143,6 +157,32 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/zh/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         
@@ -160,11 +200,6 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="查找">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
         
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
@@ -203,14 +238,8 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="标签" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -244,8 +273,6 @@
         <a href="./" class="md-tabs__link">
           
   
-    
-  
   文档构建
 
         </a>
@@ -263,8 +290,6 @@
       <li class="md-tabs__item">
         <a href="../../SSLW/ProjectDescription/" class="md-tabs__link">
           
-  
-    
   
   项目文档
 
@@ -284,8 +309,6 @@
         <a href="../../patent/patent/" class="md-tabs__link">
           
   
-    
-  
   学习文档
 
         </a>
@@ -300,16 +323,32 @@
   
     
     
+      
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
       <li class="md-tabs__item">
         <a href="../../WTAI-DT/error/" class="md-tabs__link">
           
   
-    
-  
-  SCADA风机运行数据分析文档
+  WTAI-DT
 
         </a>
       </li>
+    
+  
+
+    
+  
+
     
   
 
@@ -317,7 +356,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -388,12 +433,6 @@
   
   
     
-    
-      
-        
-      
-        
-      
     
     
       
@@ -620,12 +659,6 @@
   
     
     
-      
-        
-      
-        
-      
-    
     
       
       
@@ -715,10 +748,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -787,18 +816,6 @@
   
     
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
     
       
       
@@ -817,7 +834,7 @@
             
   
   <span class="md-ellipsis">
-    SCADA风机运行数据分析文档
+    WTAI-DT
   </span>
   
 
@@ -827,7 +844,87 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            SCADA风机运行数据分析文档
+            WTAI-DT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+     
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+             
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_1" id="__nav_5_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SCADA-ANALYSIS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            SCADA-ANALYSIS
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -931,6 +1028,22 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1079,7 +1192,7 @@
   
     <a href="https://github.com/cheercao/my_mkdocs/edit/master/docs/HowToUse/Use.md" title="编辑此页" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
   
   
@@ -1088,15 +1201,15 @@
     
     <a href="https://github.com/cheercao/my_mkdocs/raw/master/docs/HowToUse/Use.md" title="查看本页的源代码" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-<h1 id="_1">使用指南</h1>
-<h2 id="1">1.介绍</h2>
+<h1 id="_1">使用指南<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="1">1.介绍<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>本项目使用mkdocs开源项目辅助生成项目网页文档并与GitHub连接由GitHub提供文档地址</p>
-<h2 id="2mkdocs">2.mkdocs安装</h2>
+<h2 id="2mkdocs">2.mkdocs安装<a class="headerlink" href="#2mkdocs" title="Permanent link">&para;</a></h2>
 <p>安装mkdocs前需要安装python环境。mkdocs要求python版本为：python 3.5、python 3.6 、python 3.7和python 3.8。</p>
 <p>安装mkdocs非常简单，只需要在控制台运行如下命令即可：</p>
 <p><code>pip install mkdocs</code></p>
@@ -1105,8 +1218,8 @@
 <p>如果提示不能运行mkdocs命令，简单的解决方法只需要在命令前加上python -m，即：</p>
 <p><code>python -m mkdocs --version</code></p>
 <p>永久的解决方法是将python安装目录下的Scripts加入环境变量Path中。</p>
-<h2 id="3mkdocs">3.mkdocs简单使用</h2>
-<h3 id="1mkdocs">1.创建一个基本的mkdocs并使用</h3>
+<h2 id="3mkdocs">3.mkdocs简单使用<a class="headerlink" href="#3mkdocs" title="Permanent link">&para;</a></h2>
+<h3 id="1mkdocs">1.创建一个基本的mkdocs并使用<a class="headerlink" href="#1mkdocs" title="Permanent link">&para;</a></h3>
 <p>我们只需要运行如下命令，就可以创建一个站点：</p>
 <p><code>mkdocs new dir_name</code></p>
 <p>这个命令会在当前目录下创建一个目录（dir_name）。注意：dir_name可以选择自己喜欢的名字。</p>
@@ -1124,64 +1237,64 @@
 <p>我们可以修改mkdocs.yml文件中的站点名site_name：</p>
 <p><code>site_name: 我的第一个站点</code></p>
 <p><img alt="在这里插入图片描述" src="../../images/Use/20210422170054785.png" /></p>
-<h3 id="2">2.添加页面</h3>
+<h3 id="2">2.添加页面<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <p>前面mkdocs为我们创建了一个页面<code>index.md</code>，我们同样可以自己添加页面，比如，在<code>docs</code>目录下创建页面<code>about.md</code>，页面内容如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># 关于我</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gu">## 我叫什么</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>水木子
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gu">## 我的身份</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>学生
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gu">## 我来自哪里</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>重庆
-</code></pre></div>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># 关于我</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gu">## 我叫什么</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>水木子
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gu">## 我的身份</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>学生
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gu">## 我来自哪里</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>重庆
+</span></code></pre></div>
 <p>然后在配置文件<code>mkdocs.yml</code>中添加以下配置项：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nav: 
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  - 主页: index.md
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  - 关于我: about.md
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>nav: 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  - 主页: index.md
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  - 关于我: about.md
+</span></code></pre></div>
 <p>浏览器显示效果如下：</p>
 <p><img alt="在这里插入图片描述" src="../../images/Use/2.png" /></p>
 <p>这样我们就成功地添加了一个页面。我们也可以添加多级页面，首先在<code>docs</code>目录下新建一个目录，此处命名为<code>Tutorial</code>，然后再该目录下创建文档，此处创建三个文档：<code>C.md</code>、<code>Java.md</code>和<code>Python.md</code>。目录结构如下：</p>
 <p><img alt="在这里插入图片描述" src="../../images/Use/3.png" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>nav: 
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  - 主页: index.md
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  - 教程:
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    - C: Tutorial/C.md
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    - Java: Tutorial/Java.md
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    - Python: Tutorial/Python.md
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  - 关于我: about.md
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>nav: 
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  - 主页: index.md
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  - 教程:
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    - C: Tutorial/C.md
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    - Java: Tutorial/Java.md
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    - Python: Tutorial/Python.md
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  - 关于我: about.md
+</span></code></pre></div>
 <p><img alt="在这里插入图片描述" src="../../images/Use/4.png" /></p>
 <p>除了在导航栏上设置页面，我们也可以在页面上通过markdown语法进行跳转：<code>[文字](要跳转的地址)</code></p>
 <p>比如，在<code>about.md</code>中要跳转到<code>Java.md</code>页面：<code>[去Java.md页面](./Tutorial/Java.md)</code>当你点击这个链接时，就会跳转到对应的页面：</p>
 <p><img alt="在这里插入图片描述" src="../../images/Use/5.png" /></p>
-<h3 id="3">3.更改主题</h3>
+<h3 id="3">3.更改主题<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <p>mkdocs默认有两个主题：mkdocs和readthedoc，默认使用mkdocs。我们在配置文件中修改，使用<code>readthedocs</code>主题：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>theme:
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  name: readthedocs
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>theme:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  name: readthedocs
+</span></code></pre></div>
 <p><img alt="img" src="../../images/Use/6.png" /></p>
 <p>我们也可以使用第三方主题，第三方主题详细列表如下：https://<a href="https://so.csdn.net/so/search?q=github&amp;spm=1001.2101.3001.7020">github</a>.com/mkdocs/mkdocs/wiki/MkDocs-Themes。可以参照具体的主题使用教程，进行配置。在本例中，我们配置一个名为<code>material</code>的主题。</p>
 <p>首先利用<code>pip</code>下载相应的主题：<code>pip install mkdocs-material</code>，然后在配置文件中修改主题：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>theme:
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  name: material
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>theme:
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  name: material
+</span></code></pre></div>
 <p><img alt="image-20230703160455946" src="../../images/Use/image-20230703160455946.png" /></p>
-<h3 id="4github">4.部署到GitHub</h3>
+<h3 id="4github">4.部署到GitHub<a class="headerlink" href="#4github" title="Permanent link">&para;</a></h3>
 <p>当你尽心尽力地输出文档后，你不希望这些内容只能自己在本地看吧，你还是希望将这些文档部署到服务器上，让其他人也能看。本小节就讲解如何部署文档到服务器上。首先来认识一个命令:<code>mkdocs build</code></p>
 <p><img alt="image-20230703160607679" src="../../images/Use/image-20230703160607679.png" /></p>
 <p>这个命令会在<code>learn-mkdocs</code>目录下生成一个目录<code>site</code>，这个目录中包含了静态站点的页面内容。</p>
 <p><img alt="image-20230703160659578" src="../../images/Use/image-20230703160656906.png" /></p>
-<h4 id="1github">1.连接到GitHub</h4>
+<h4 id="1github">1.连接到GitHub<a class="headerlink" href="#1github" title="Permanent link">&para;</a></h4>
 <p>我们可以在GitHub中创建一个仓库，名为<code>mymkdocs</code>。然后在<code>learn-mkdocs</code>下打开git，并将当前目录设置为一个仓库，然后与GitHub新创建的仓库<code>mymkdocs</code>连接：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git init
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git remote add origin https://github.com/你的GitHub名字/你的项目名字.git
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git init
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git remote add origin https://github.com/你的GitHub名字/你的项目名字.git
+</span></code></pre></div>
 <p>然后在<code>learn-mkdocs</code>目录下打开控制台，执行命令：<code>mkdocs gh-deploy</code>。这个命令会在GitHub项目上创建一个<code>gh-pages</code>分支，并执行<code>mkdocs build</code>命令，然后将当前目录中的<code>site</code>目录下的内容推送到远程的<code>gh-pages</code>分支：</p>
 <p><img alt="image-20230703160934836" src="../../images/Use/image-20230703160934836.png" /></p>
 <p>浏览器访问<code>http://你的GitHub名字.github.io/你的项目名字</code>即可：</p>
 <p><img alt="image-20230703161004199" src="../../images/Use/image-20230703161004199.png" /></p>
-<h4 id="2_1">2.个人页面</h4>
+<h4 id="2_1">2.个人页面<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
 <p>个人页面与项目页面不同的是站点放在一个特殊的仓库中，这个仓库的名字为<code>{your_github_usernmae}.github.io</code>，这样我们就可以通过<code>https://{your-github-username}.github.io</code>访问到我们的站点了，不用再加项目名了。首先在GitHub创建一个特殊的仓库，名字为<code>{your_github_usernmae}.github.io</code>，然后在本地<code>learn-mkdocs</code>同级目录下创建一个与GitHub仓库同名的文件夹，作为本地仓库。将本地仓库与远程仓库绑定在一起：</p>
 <p><img alt="image-20230703161643599" src="../../images/Use/image-20230703161643599.png" /></p>
 <p>打开控制台，找到本地仓库的位置，然后执行下面的命令：<code>mkdocs gh-deploy --config-file ../{learn-mkdocs}/mkdocs.yml --remote-branch master</code></p>
@@ -1209,6 +1322,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1221,46 +1336,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="上一页: 主页">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                主页
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../Config_YAML/" class="md-footer__link md-footer__link--next" aria-label="下一页: yaml配置">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                yaml配置
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1284,10 +1359,20 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "navigation.instant", "content.code.copy", "content.code.select", "content.code.annotate", "search.highlight", "content.tabs.link", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../javascripts/bd_statistics.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/contributors.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

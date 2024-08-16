@@ -29,6 +29,12 @@
       
       
 
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm-86.2-346.7c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1 0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6-13.3 0-24-10.7-24-24v-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1 0-8.4-6.8-15.1-15.1-15.1h-58.3c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1-64 0z"/></svg>');}</style>
+
 
     
     
@@ -39,10 +45,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -79,10 +87,16 @@
       
     </div>
     
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="项目文档" class="md-header__button md-logo" aria-label="项目文档" data-md-component="logo">
       
@@ -141,6 +155,32 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/zh/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         
@@ -158,11 +198,6 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="查找">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
         
         <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
@@ -201,14 +236,8 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="标签" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -240,8 +269,6 @@
         <a href="../../HowToUse/Use/" class="md-tabs__link">
           
   
-    
-  
   文档构建
 
         </a>
@@ -259,8 +286,6 @@
       <li class="md-tabs__item">
         <a href="../../SSLW/ProjectDescription/" class="md-tabs__link">
           
-  
-    
   
   项目文档
 
@@ -280,8 +305,6 @@
         <a href="../../patent/patent/" class="md-tabs__link">
           
   
-    
-  
   学习文档
 
         </a>
@@ -298,16 +321,36 @@
   
     
     
+      
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../error/" class="md-tabs__link">
           
   
-    
-  
-  SCADA风机运行数据分析文档
+  WTAI-DT
 
         </a>
       </li>
+    
+  
+
+    
+  
+
     
   
 
@@ -315,7 +358,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -384,12 +433,6 @@
   
   
     
-    
-      
-        
-      
-        
-      
     
     
       
@@ -480,12 +523,6 @@
   
     
     
-      
-        
-      
-        
-      
-    
     
       
       
@@ -575,10 +612,6 @@
   
     
     
-      
-        
-      
-    
     
       
       
@@ -649,18 +682,6 @@
   
     
     
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
     
       
         
@@ -682,7 +703,7 @@
             
   
   <span class="md-ellipsis">
-    SCADA风机运行数据分析文档
+    WTAI-DT
   </span>
   
 
@@ -692,7 +713,94 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            SCADA风机运行数据分析文档
+            WTAI-DT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+     
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+             
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1_1" id="__nav_5_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SCADA-ANALYSIS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            SCADA-ANALYSIS
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -901,6 +1009,22 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
   </ul>
 </nav>
@@ -999,7 +1123,7 @@
   
     <a href="https://github.com/cheercao/my_mkdocs/edit/master/docs/WTAI-DT/report.md" title="编辑此页" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
   
   
@@ -1008,14 +1132,14 @@
     
     <a href="https://github.com/cheercao/my_mkdocs/raw/master/docs/WTAI-DT/report.md" title="查看本页的源代码" class="md-content__button md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
     </a>
   
 
 
-<h1 id="report">Report</h1>
+<h1 id="report">Report<a class="headerlink" href="#report" title="Permanent link">&para;</a></h1>
 <p><code>Report</code> 类是一个用于生成和操作 Word 文档的实用工具。通过该类，用户可以轻松创建专业化的报告文档。<code>Report</code> 类不仅能够插入和定制标题、段落、图片和表格等内容，还支持对文档中字体、对齐方式、单元格边框等元素进行详细设置。借助这些功能，用户能够生成具有统一格式和美观排版的文档，适用于各类报告生成需求。</p>
-<h3 id="reportcover_path">Report(cover_path)</h3>
+<h3 id="reportcover_path">Report(cover_path)<a class="headerlink" href="#reportcover_path" title="Permanent link">&para;</a></h3>
 <p>初始化 <code>Report</code> 类后，可以选择性地指定报告的封面路径。如果没有指定封面路径，系统将生成一个默认的空白文档作为报告的起始页。</p>
 <blockquote>
 <p>参数：</p>
@@ -1026,8 +1150,8 @@
 <blockquote>
 <p><strong>使用示例</strong></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">report</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="s1">&#39;wtai_dt/SampleData/report_data/封面.docx&#39;</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">report</span> <span class="o">=</span> <span class="n">Report</span><span class="p">(</span><span class="s1">&#39;wtai_dt/SampleData/report_data/封面.docx&#39;</span><span class="p">)</span>
+</span></code></pre></div>
 <blockquote>
 <p>report.create_new_document()</p>
 </blockquote>
@@ -1036,9 +1160,9 @@
 <p><strong>参数</strong></p>
 <p><strong>使用示例</strong></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">world</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">create_new_document</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="reportinsert_titledoc-title_text">report.insert_title(doc, title_text)</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">world</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">create_new_document</span><span class="p">()</span>
+</span></code></pre></div>
+<h3 id="reportinsert_titledoc-title_text">report.insert_title(doc, title_text)<a class="headerlink" href="#reportinsert_titledoc-title_text" title="Permanent link">&para;</a></h3>
 <p><code>insert_title</code> 函数用于在Word文档中插入一级标题。调用该函数时，用户需要提供文档对象和标题文本。函数将自动将标题文本设置为加粗、黑色的宋体，并使用一级标题样式（<code>level=1</code>）和12磅字体大小，从而保证文档中标题的一致性和规范性。通过此函数，用户可以轻松创建格式统一的章节标题。</p>
 <blockquote>
 <p><strong>参数</strong></p>
@@ -1050,10 +1174,10 @@
 <blockquote>
 <p><strong>使用示例</strong></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">big_title</span> <span class="o">=</span> <span class="mi">1</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_title</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">big_title</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;、 &quot;</span> <span class="o">+</span> <span class="s2">&quot;机组发电性能分析&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="reportinsert_lettle_title_worddoc-lettle_text">report.insert_lettle_title_word(doc, lettle_text)</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">big_title</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_title</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">big_title</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;、 &quot;</span> <span class="o">+</span> <span class="s2">&quot;机组发电性能分析&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="reportinsert_lettle_title_worddoc-lettle_text">report.insert_lettle_title_word(doc, lettle_text)<a class="headerlink" href="#reportinsert_lettle_title_worddoc-lettle_text" title="Permanent link">&para;</a></h3>
 <p><code>insert_lettle_title_word</code> 函数用于在Word文档中插入二级标题，并自定义标题的格式。该函数通过调用 <code>doc.add_heading(level=2)</code> 创建一个二级标题，并设置标题的字体为宋体、加粗、黑色，字号为12磅。此外，还为标题指定了适合中文的字体配置，确保标题在中英文混排时的显示效果。这个函数适合用于插入具有强调作用的小标题，使文档结构更加清晰。</p>
 <blockquote>
 <p><strong>参数</strong></p>
@@ -1065,10 +1189,10 @@
 <blockquote>
 <p><strong>使用示例</strong></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">small_title</span> <span class="o">=</span> <span class="mi">1</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_lettle_title_word</span><span class="p">(</span><span class="n">world</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">big_title</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">small_title</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;、 各风机风速和电量分析结果&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="reportinsert_image_tabledoc-image_paths-image_name-num_cols_per_table2">report.insert_image_table(doc, image_paths, image_name, num_cols_per_table=2)</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">small_title</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_lettle_title_word</span><span class="p">(</span><span class="n">world</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="n">big_title</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">small_title</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;、 各风机风速和电量分析结果&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="reportinsert_image_tabledoc-image_paths-image_name-num_cols_per_table2">report.insert_image_table(doc, image_paths, image_name, num_cols_per_table=2)<a class="headerlink" href="#reportinsert_image_tabledoc-image_paths-image_name-num_cols_per_table2" title="Permanent link">&para;</a></h3>
 <p><code>insert_image_table</code> 函数用于在 Word 文档中插入一个包含图像的表格。用户可以指定图像的路径、图像的名称，以及每个表格中包含的列数。函数将根据提供的图像数量自动创建多个表格，并将每张图像及其对应的名称插入到表格的单元格中。每个图像会自动调整为适合单元格的宽度，并且表格的边框将被移除，使得整个图表布局更加美观、整齐。此函数适用于需要批量插入和展示多个图像的场景。</p>
 <blockquote>
 <p><strong>参数</strong></p>
@@ -1082,16 +1206,16 @@
 <blockquote>
 <p><strong>使用示例</strong></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;风机 28&#39;</span><span class="p">,</span> <span class="s1">&#39;风机 29&#39;</span><span class="p">,</span> <span class="s1">&#39;风机 30&#39;</span><span class="p">]</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C:/Users/86152/Desktop/风机28 风速-功率曲线.png&#39;</span><span class="p">,</span> <span class="s1">&#39;C:/Users/86152/Desktop/风机29 风速-功率曲线.png&#39;</span><span class="p">,</span> <span class="s1">&#39;C:/Users/86152/Desktop/风机30 风速-功率曲线.png&#39;</span><span class="p">]</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">for</span> <span class="nb">id</span><span class="p">,</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">save_type</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">if</span> <span class="n">content</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;image&#39;</span><span class="p">:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="n">name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">utility</span><span class="o">.</span><span class="n">resource_path</span><span class="p">(</span><span class="n">content</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="n">report_content</span> <span class="o">=</span> <span class="n">report_content</span> <span class="o">+</span> <span class="n">content</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_image_table</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="reportinsert_paragraphdoc-text-font_nameu-font_size12">report.insert_paragraph(doc, text, font_name=u'宋体', font_size=12)</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;风机 28&#39;</span><span class="p">,</span> <span class="s1">&#39;风机 29&#39;</span><span class="p">,</span> <span class="s1">&#39;风机 30&#39;</span><span class="p">]</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C:/Users/86152/Desktop/风机28 风速-功率曲线.png&#39;</span><span class="p">,</span> <span class="s1">&#39;C:/Users/86152/Desktop/风机29 风速-功率曲线.png&#39;</span><span class="p">,</span> <span class="s1">&#39;C:/Users/86152/Desktop/风机30 风速-功率曲线.png&#39;</span><span class="p">]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">for</span> <span class="nb">id</span><span class="p">,</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">save_type</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">if</span> <span class="n">content</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;image&#39;</span><span class="p">:</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        <span class="n">name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">utility</span><span class="o">.</span><span class="n">resource_path</span><span class="p">(</span><span class="n">content</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;./&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        <span class="n">report_content</span> <span class="o">=</span> <span class="n">report_content</span> <span class="o">+</span> <span class="n">content</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_image_table</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="reportinsert_paragraphdoc-text-font_nameu-font_size12">report.insert_paragraph(doc, text, font_name=u'宋体', font_size=12)<a class="headerlink" href="#reportinsert_paragraphdoc-text-font_nameu-font_size12" title="Permanent link">&para;</a></h3>
 <p><code>insert_paragraph</code> 函数用于在 Word 文档中插入一段新的文本段落。用户可以指定文本内容、字体名称和字体大小。该函数会自动在段落前添加缩进，并对段落中的每个文本运行（run）应用指定的字体和大小格式。通过这种方式，可以确保文档中的段落格式一致，适用于需要插入描述性文本或解释内容的场景。</p>
 <blockquote>
 <p><strong>参数</strong></p>
@@ -1105,9 +1229,9 @@
 <blockquote>
 <p><strong>使用示例</strong></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_paragraph</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="n">report_content</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="reportinsert_table_worddoc-data">report.insert_table_word(doc, data)</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_paragraph</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="n">report_content</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="reportinsert_table_worddoc-data">report.insert_table_word(doc, data)<a class="headerlink" href="#reportinsert_table_worddoc-data" title="Permanent link">&para;</a></h3>
 <p><code>insert_table_word</code> 函数用于在 Word 文档中插入一个表格，并根据提供的数据自动填充表格的内容。函数会首先创建一个包含标题行的表格，然后逐行添加数据，确保每个单元格的文本格式统一（如字体、颜色和大小）。此外，该函数还会设置单元格的对齐方式，使表格内容在视觉上更加整齐和专业。此功能适用于需要在报告中展示结构化数据或统计信息的场景。。</p>
 <blockquote>
 <p><strong>参数</strong></p>
@@ -1119,9 +1243,9 @@
 <blockquote>
 <p><strong>使用示例</strong></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;风机&#39;</span><span class="p">,</span> <span class="s1">&#39;平均风速(m/s)&#39;</span><span class="p">,</span> <span class="s1">&#39;年平均风速(m/s)&#39;</span><span class="p">,</span> <span class="s1">&#39;理论电量(kw·h)&#39;</span><span class="p">,</span> <span class="s1">&#39;实际电量(kw·h)&#39;</span><span class="p">,</span> <span class="s1">&#39;数据开始时间&#39;</span><span class="p">,</span> <span class="s1">&#39;数据结束时间&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;28&#39;</span><span class="p">,</span> <span class="s1">&#39;6.996&#39;</span><span class="p">,</span> <span class="s2">&quot;{&#39;2024年风速&#39;: &#39;6.996&#39;}&quot;</span><span class="p">,</span> <span class="s1">&#39;1033793&#39;</span><span class="p">,</span> <span class="s1">&#39;805080&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-04-01 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-06-01 23:59:59&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;29&#39;</span><span class="p">,</span> <span class="s1">&#39;6.156&#39;</span><span class="p">,</span> <span class="s2">&quot;{&#39;2024年风速&#39;: &#39;6.156&#39;}&quot;</span><span class="p">,</span> <span class="s1">&#39;503275&#39;</span><span class="p">,</span> <span class="s1">&#39;783300&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-04-01 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-06-01 23:59:59&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;7.781&#39;</span><span class="p">,</span> <span class="s2">&quot;{&#39;2024年风速&#39;: &#39;7.781&#39;}&quot;</span><span class="p">,</span> <span class="s1">&#39;1050575&#39;</span><span class="p">,</span> <span class="s1">&#39;776880&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-04-01 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-06-01 23:59:59&#39;</span><span class="p">]]</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_table_word</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="n">final_list</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;风机&#39;</span><span class="p">,</span> <span class="s1">&#39;平均风速(m/s)&#39;</span><span class="p">,</span> <span class="s1">&#39;年平均风速(m/s)&#39;</span><span class="p">,</span> <span class="s1">&#39;理论电量(kw·h)&#39;</span><span class="p">,</span> <span class="s1">&#39;实际电量(kw·h)&#39;</span><span class="p">,</span> <span class="s1">&#39;数据开始时间&#39;</span><span class="p">,</span> <span class="s1">&#39;数据结束时间&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;28&#39;</span><span class="p">,</span> <span class="s1">&#39;6.996&#39;</span><span class="p">,</span> <span class="s2">&quot;{&#39;2024年风速&#39;: &#39;6.996&#39;}&quot;</span><span class="p">,</span> <span class="s1">&#39;1033793&#39;</span><span class="p">,</span> <span class="s1">&#39;805080&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-04-01 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-06-01 23:59:59&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;29&#39;</span><span class="p">,</span> <span class="s1">&#39;6.156&#39;</span><span class="p">,</span> <span class="s2">&quot;{&#39;2024年风速&#39;: &#39;6.156&#39;}&quot;</span><span class="p">,</span> <span class="s1">&#39;503275&#39;</span><span class="p">,</span> <span class="s1">&#39;783300&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-04-01 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-06-01 23:59:59&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;30&#39;</span><span class="p">,</span> <span class="s1">&#39;7.781&#39;</span><span class="p">,</span> <span class="s2">&quot;{&#39;2024年风速&#39;: &#39;7.781&#39;}&quot;</span><span class="p">,</span> <span class="s1">&#39;1050575&#39;</span><span class="p">,</span> <span class="s1">&#39;776880&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-04-01 00:00:00&#39;</span><span class="p">,</span> <span class="s1">&#39;2024-06-01 23:59:59&#39;</span><span class="p">]]</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">report</span><span class="o">.</span><span class="n">insert_table_word</span><span class="p">(</span><span class="n">world</span><span class="p">,</span> <span class="n">final_list</span><span class="p">)</span>
+</span></code></pre></div>
 
 
 
@@ -1139,6 +1263,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1151,30 +1277,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="../yaw_analysis/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 偏航分析">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                偏航分析
-              </div>
-            </div>
-          </a>
-        
-        
-      </nav>
-    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1198,10 +1300,20 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "navigation.instant", "content.code.copy", "content.code.select", "content.code.annotate", "search.highlight", "content.tabs.link", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../../javascripts/bd_statistics.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/contributors.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
